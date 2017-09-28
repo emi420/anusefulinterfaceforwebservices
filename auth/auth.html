@@ -1,0 +1,22 @@
+<div class="login-view">
+	<div class="col-sm-12 text-center">
+		<h1>Login</h1>
+	</div>
+
+	<div class="col-sm-4">
+	</div>
+	<form class="col-sm-4 text-center">
+		<br />
+		<input type="text" class="form-control input-lg" placeholder="Username" ng-model="loginData.username" />
+		<br />
+		<input type="password" class="form-control input-lg" placeholder="Password" ng-model="loginData.password" />
+		<br />								
+		<input type="submit" ng-click="doLogin()" ng-disabled="(waiting)" class="btn btn-primary btn-block btn-lg" value="Login" />
+		<br />
+		<br />
+		<div ng-show="(loginError)" class="alert alert-warning" role="alert" ng-bind-html="loginError"></div>
+		<small ng-show="(loginErrorMsg)" ng-bind-html="loginErrorMsg"></small>
+	</form>
+	<div class="col-sm-4">
+	</div>
+</div>
